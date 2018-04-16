@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+
+<div class="row ">
+  <ul class="col-md-4 col-xs-6" *ngFor="let task of tasks">
+    <li  class=" thumbnail ">
+       <div class="card " style="width:300px; height:100px">
+       <div class="row" style="height:100%;" >
+         <img class="card-img-top col-sm-6" src="{{task.image}}" alt="Card image" style="float:left; height:100%;" >
+         <div class="card-body col-sm-6" style="float:left;height:100%;">
+           <h6 class="card-title">{{task.task}}</h6>
+           <p class="card-text"><small>{{task.createdDate}}</small></p>
+         </div>
+        </div>
+       </div>
+    </li>
+
+  </ul>
+  <div class="col-md-4 col-xs-3">
+
+  </div>
+  </div>
+</div>
