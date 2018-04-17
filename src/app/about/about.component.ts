@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-list-task1',
-  templateUrl: './list-task1.component.html',
-  styleUrls: ['./list-task1.component.css']
+  selector: '',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class ListTaskComponent1 implements OnInit {
+export class About implements OnInit {
 
 	public tasks;
 
@@ -21,7 +21,7 @@ export class ListTaskComponent1 implements OnInit {
 	}
 
 	getTask(){
-		return this.angularFire.list('/news').valueChanges();
+		return this.angularFire.list('/task').valueChanges();
 	}
 
 }

@@ -7,10 +7,11 @@ import { environment } from '../environments/environment';
 import { RootComponent } from './root/root.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ListTaskComponent } from './list-task/list-task.component';
-import {ListTaskComponent1} from './list-task1/list-task1.component';
+import {Education} from './education/education.component';
 import {RouterModule,Routes} from '@angular/router';
 import {Sports} from './Sports/Sports.component';
 import {homePageComponent} from './home-page/home-page.component';
+import {About} from './about/about.component';
 
 
 @NgModule({
@@ -18,9 +19,10 @@ import {homePageComponent} from './home-page/home-page.component';
     RootComponent,
     AddTaskComponent,
     ListTaskComponent,
-    ListTaskComponent1,
+    Education,
     Sports,
     homePageComponent,
+    About,
   ],
   imports: [
     BrowserModule,
@@ -28,9 +30,10 @@ import {homePageComponent} from './home-page/home-page.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     RouterModule.forRoot([
-    {path:'news',component:ListTaskComponent1},
+    {path:'education',component:Education},
     {path:'',component:homePageComponent},
     {path:'sports',component:Sports},
+    {path:'about',component:About},
     ])
   ],
   providers: [],
