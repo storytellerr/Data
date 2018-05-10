@@ -24,4 +24,5 @@ export class homePageComponent implements OnInit {
 		return this.angularFire.list('/task').valueChanges();
 	}
 
+
 }

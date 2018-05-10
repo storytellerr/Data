@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule} from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { RootComponent } from './root/root.component';
@@ -25,6 +27,7 @@ import {About} from './about/about.component';
     About,
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -37,6 +40,7 @@ import {About} from './about/about.component';
     ])
   ],
   providers: [],
-  bootstrap: [RootComponent]
+  bootstrap: [RootComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
