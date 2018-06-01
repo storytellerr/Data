@@ -14,6 +14,7 @@ import {RouterModule,Routes} from '@angular/router';
 import {Sports} from './Sports/Sports.component';
 import {homePageComponent} from './home-page/home-page.component';
 import {About} from './about/about.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {About} from './about/about.component';
     Sports,
     homePageComponent,
     About,
+    ImageSliderComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

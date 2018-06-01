@@ -21,7 +21,9 @@ export class RootComponent implements OnInit {
   }
 
   getTask(){
+  console.log("hello");
 		return this.angularFire.list('/noticeBoard').valueChanges();
+
 	}
 
 }

@@ -8,21 +8,24 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class homePageComponent implements OnInit {
 
-	public tasks;
-
-  	constructor(private angularFire: AngularFireDatabase) {
+public tasks;
+constructor(private angularFire: AngularFireDatabase) {
 
   	}
 
 	ngOnInit() {
 		this.getTask().subscribe(res => {
 			this.tasks = res;
+
 		});
 	}
 
 	getTask(){
 		return this.angularFire.list('/task').valueChanges();
 	}
+
+
+
 
 
 }
